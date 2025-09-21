@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background: hsl(30, 38%, 92%);
+ justify-items: center;
+}
+.product {
+    background-color: white;
+    border-radius: 10px;
+    margin: 5em 1em;
+    overflow: hidden;
+    display: grid;
+}
+@media (min-width: 700px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;
+    }
+    .buy:hover {
+        background-color: hsl(158, 42%, 18%);
+        cursor: pointer;
+    }
+    .product__img img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+picture img{
+    margin: auto;
+    width: 100%;
+}
+
+
+.info {
+    padding: 2em;
+    display: grid;
+}
+
+.category {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 0.25em;
+    margin-bottom: 2em;
+}
+
+.info h1 {
+    font-family: "Fraunces", sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4em;
+    margin-bottom: 1.2em;
+}
+
+.pricepoint {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    }
+
+.price {
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    line-height: 1;
+    margin: 0;
+    font-size: 2em;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    text-decoration: none;
+    padding: 1.2em;
+    border-radius: 10px;
+    border: 0;
+    gap: 0.8em;
+    font-weight: 700;
+}
+
+.buy[data-icon="shopping-cart"]::before {
+    content:"";
+    background-image: url(/images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
